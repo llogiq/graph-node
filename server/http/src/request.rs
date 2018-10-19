@@ -91,7 +91,6 @@ mod tests {
     #[test]
     fn rejects_invalid_json() {
         let schema = Schema {
-            name: "test".to_string(),
             id: "test".to_string(),
             document: graphql_parser::parse_schema(EXAMPLE_SCHEMA).unwrap(),
         };
@@ -102,7 +101,6 @@ mod tests {
     #[test]
     fn rejects_json_without_query_field() {
         let schema = Schema {
-            name: "test".to_string(),
             id: "test".to_string(),
             document: graphql_parser::parse_schema(EXAMPLE_SCHEMA).unwrap(),
         };
@@ -115,7 +113,6 @@ mod tests {
     #[test]
     fn rejects_json_with_non_string_query_field() {
         let schema = Schema {
-            name: "test".to_string(),
             id: "test".to_string(),
             document: graphql_parser::parse_schema(EXAMPLE_SCHEMA).unwrap(),
         };
@@ -128,7 +125,6 @@ mod tests {
     #[test]
     fn rejects_broken_queries() {
         let schema = Schema {
-            name: "test".to_string(),
             id: "test".to_string(),
             document: graphql_parser::parse_schema(EXAMPLE_SCHEMA).unwrap(),
         };
@@ -139,7 +135,6 @@ mod tests {
     #[test]
     fn accepts_valid_queries() {
         let schema = Schema {
-            name: "test".to_string(),
             id: "test".to_string(),
             document: graphql_parser::parse_schema(EXAMPLE_SCHEMA).unwrap(),
         };
@@ -157,7 +152,6 @@ mod tests {
     #[test]
     fn accepts_null_variables() {
         let schema = Schema {
-            name: "test".to_string(),
             id: "test".to_string(),
             document: graphql_parser::parse_schema(EXAMPLE_SCHEMA).unwrap(),
         };
@@ -181,7 +175,6 @@ mod tests {
     #[test]
     fn rejects_non_map_variables() {
         let schema = Schema {
-            name: "test".to_string(),
             id: "test".to_string(),
             document: graphql_parser::parse_schema(EXAMPLE_SCHEMA).unwrap(),
         };
@@ -201,7 +194,6 @@ mod tests {
     #[test]
     fn parses_variables() {
         let schema = Schema {
-            name: "test".to_string(),
             id: "test".to_string(),
             document: graphql_parser::parse_schema(EXAMPLE_SCHEMA).unwrap(),
         };
